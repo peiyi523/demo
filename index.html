@@ -12,6 +12,19 @@
             color: #864AF9;
         }
 
+        .sub-title {
+            background-color: #D24545;
+            color: #E4DEBE;
+            /* px-pixel */
+            /* 1rem=16pixel */
+            font-size: 2rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border: black 3px solid;
+            text-align: left;
+            padding-left: 12px;
+
+        }
+
         h1 {
             background-color: #F3CCF3;
             columns: #86A789;
@@ -20,7 +33,95 @@
         body {
             background-color: #C1F2B0;
             color: #C21292;
+            font-family: 標楷體, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
+        }
+
+        .title {
+            text-align: center;
+            color: #5912df;
+            font-size: 3rem;
+            border-radius: black 12px solid;
+            background-color: palevioletred;
+            /* 上 右 下 左 */
+            margin: 24px 64px 20px 0;
+            /* 內間距 */
+            padding: 12px;
+        }
+
+        .eng-title {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #info {
+            background: darksalmon;
+            color: black;
+            padding: 24px;
+
+        }
+
+        .slogan {
+            color: blue;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+
+        #container {
+            padding: 1rem;
+        }
+
+        .image {
+            background-color: white;
+            padding: 12px;
+            width: 28%;
+        }
+
+        .imagess {
+            text-align: center;
+            background-color: #332941;
+            border-radius: 2rem;
+            padding-left: 12px;
+            margin: 24px;
+        }
+
+        table {
+            width: 80%;
+            height: 300px;
+            text-align: center;
+            margin: 0 auto;
+            border: 3px black solid;
+
+
+        }
+
+        thead {
+            background-color: #C21292;
+            color: #F3CCF3;
+        }
+
+        tbody {
+            background-color: aqua;
+            color: #5912df;
+        }
+
+        td:first-child {
+            background-color: red;
+            color: wheat;
+        }
+
+        #video {
+            text-align: center;
+        }
+
+        #post-form {
+            text-align: center;
+        }
+
+        form {
+            background-color: coral;
+            color: black;
+            padding: 1rem 0px;
+            border-radius: 1rem;
         }
     </style>
 
@@ -28,113 +129,126 @@
 
 
 <body>
+    <div id="container">
 
-    <h1 style="color:rgb(194, 26, 59);background-color: rgb(182, 213, 134);">我愛健身網站</h1>
-    <div style="background-color: aqua;color: black;">
-        <b>健身，英文稱為workout</b>，健身這兩個字拆開來的意思就是健康身體，<br>
-        通過各種運動方式或方法來增強力量、增加肌肉量、柔韌性、耐力，<br>
-        以及提高協調和控制身體各部分的能力來使我們的身體更強健。<br>
-        <p>除了塑造好身材，透過健身可以刺激我們身體的肌肉，再搭配飲食的控制，<br>
-            這能大大幫助我們的肌肉量增加，以及讓我們的肌肉更加的結實。</p>
-        <em>如果你對健身仍然保持著懷疑的態度，</em>那你大可以去看看你喜歡的健身老戲骨幹，<br>
-        他們是如何做到年過50/60歲，依舊在舞臺上或者是電影螢幕上綻放光彩。<br>
-        <u style="background-color:chartreuse;color:  brown;">答案就是堅持<b style="color: brown;">運動健身!</b></u>
-    </div>
-    <hr size="5" color="blue">
-    <a
-        href="https://www.bing.com/images/search?q=%e5%81%a5%e8%ba%abbanner&qpvt=%e5%81%a5%e8%ba%abbanner&form=IGRE&first=1"><img
-            width="500px"
-            src="https://www.bing.com/th?id=OIP.O31zAOs18vGV0kmvHSolBwHaCs&w=321&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"
-            alt="找不到圖片"></a>
 
-    <h2 style="background-color: blue;color: azure;">健身的10個好處</h2>
-    <ol type="a">
-        <li>增加基礎代謝率</li>
-        <li>預防疾病和提高免疫力</li>
-        <li>改善心情</li>
-        <li>改善睡眠</li>
-        <li>增加自信</li>
-        <li>增強記憶力</li>
-        <li>增強心肺能力</li>
-        <li>提升睡眠品質</li>
-        <li>釋放工作的壓力</li>
-        <li>增加肌肉助於減肥</li>
-    </ol>
-    <hr>
-    <img width="30%" src="images/charles-gaudreault-xXofYCc3hqc-unsplash (1).jpg" alt="找不到圖片">&nbsp;
-    <img width="30%" src="images/javier-santos-guzman-9MR78HGoflw-unsplash.jpg" alt="找不到圖片">&nbsp;
-    <img width="30%" src="images/samuel-girven-VJ2s0c20qCo-unsplash (1).jpg" alt="找不到圖片">
-    <h2>好文章連結</h2>
-    <ul>
-        <li><a target="_blank"
-                href="https://www.fe-amart.com.tw/index.php/life-style/life-info/secret-recipe/hero-6">健身初學者必看！10個常見的健身迷思</a>
-        </li>
+        <!-- style css樣式設計 -->
+        <div class="title">我愛健身網站
+            <span class="eng-title">GYM WEB</span>
+        </div>
+        <div id="info">
+            <b>健身，英文稱為workout</b>，健身這兩個字拆開來的意思就是健康身體，<br>
+            通過各種運動方式或方法來增強力量、增加肌肉量、柔韌性、耐力，<br>
+            以及提高協調和控制身體各部分的能力來使我們的身體更強健。<br>
+            <p>除了塑造好身材，透過健身可以刺激我們身體的肌肉，再搭配飲食的控制，<br>
+                這能大大幫助我們的肌肉量增加，以及讓我們的肌肉更加的結實。</p>
+            <em>如果你對健身仍然保持著懷疑的態度，</em>那你大可以去看看你喜歡的健身老戲骨幹，<br>
+            他們是如何做到年過50/60歲，依舊在舞臺上或者是電影螢幕上綻放光彩。<br>
+            <div class="slogan">答案就是堅持運動健身!</div>
+        </div>
+        <hr size="5" color="blue">
+        <a
+            href="https://www.bing.com/images/search?q=%e5%81%a5%e8%ba%abbanner&qpvt=%e5%81%a5%e8%ba%abbanner&form=IGRE&first=1"><img
+                width="100%"
+                src="https://www.bing.com/th?id=OIP.O31zAOs18vGV0kmvHSolBwHaCs&w=321&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"
+                alt="找不到圖片"></a>
 
-        <li><a target="_blank"
-                href="https://www.fe-amart.com.tw/index.php/life-style/life-info/secret-recipe/1239-health-63">專家教你益生菌這樣挑！聰明吃出健康好加分~</a>
-        </li>
-    </ul>
+        <!-- div+class -->
 
-    <small>
-        引用網址:<a target="_blank" href="https://www.fe-amart.com.tw/">https://www.fe-amart.com.tw/</a>
-    </small>
-    <hr>
-    <h2>&nbsp;♠&nbsp;一天所需卡路里&nbsp;♠&nbsp;</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>每天活動量</th>
-                <th>體重過輕者所需熱量</th>
-                <th>體重正常者所需熱量</th>
-                <th>體重過重、肥胖者所需熱量</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>輕度工作</th>
-                <td>35大卡 X 目前體重（公斤）</td>
-                <td>30大卡 X 目前體重（公斤）</td>
-                <td>20~25大卡 X 目前體重（公斤）</td>
-            </tr>
-            <tr>
-                <th>中度工作</th>
-                <td>40大卡 X 目前體重（公斤）</td>
-                <td>35大卡 X 目前體重（公斤）</td>
-                <td>30大卡 X 目前體重（公斤）</td>
-            </tr>
-            <tr>
-                <th>重度工作</th>
-                <td>45大卡 X 目前體重（公斤）</td>
-                <td>40大卡 X 目前體重（公斤）</td>
-                <td>35大卡 X 目前體重（公斤）</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>
-        <b>
-            <a href="bmi.html">計算BMI:</a><br>
-            計算BMI:&nbsp;&nbsp;&nbsp;</b>
-        一位民眾身高160公分，體重65公斤，<u>BMI25.4kg/m2(=65÷1.6÷1.6)</u> ，體重屬於「過重」。<br>
-        <b>計算所需熱量:&nbsp;&nbsp;</b>
-        因他的工作為坐辦公室，屬輕量工作，每天攝取熱量應在1300至1625大卡之間(=20~25大卡*65公斤)。
-    </p>
+        <div class="sub-title">健身的10個好處</div>
+        <ol type="a">
+            <li>增加基礎代謝率</li>
+            <li>預防疾病和提高免疫力</li>
+            <li>改善心情</li>
+            <li>改善睡眠</li>
+            <li>增加自信</li>
+            <li>增強記憶力</li>
+            <li>增強心肺能力</li>
+            <li>提升睡眠品質</li>
+            <li>釋放工作的壓力</li>
+            <li>增加肌肉助於減肥</li>
+        </ol>
+        <hr>
+        <!-- 置中圖片 div+id -->
+        <div class="imagess">
+            <img class="image" src="images/charles-gaudreault-xXofYCc3hqc-unsplash (1).jpg" alt="找不到圖片">&nbsp;
+            <img class="image" src="images/javier-santos-guzman-9MR78HGoflw-unsplash.jpg" alt="找不到圖片">&nbsp;
+            <img class="image" src="images/samuel-girven-VJ2s0c20qCo-unsplash (1).jpg" alt="找不到圖片">
+        </div>
+        <div class="sub-title">好文章連結</div>
+        <ul>
+            <li><a target="_blank"
+                    href="https://www.fe-amart.com.tw/index.php/life-style/life-info/secret-recipe/hero-6">健身初學者必看！10個常見的健身迷思</a>
+            </li>
+
+            <li><a target="_blank"
+                    href="https://www.fe-amart.com.tw/index.php/life-style/life-info/secret-recipe/1239-health-63">專家教你益生菌這樣挑！聰明吃出健康好加分~</a>
+            </li>
+        </ul>
+
+        <small>
+            引用網址:<a target="_blank" href="https://www.fe-amart.com.tw/">https://www.fe-amart.com.tw/</a>
+        </small>
+        <hr>
+        <div class="sub-title">&nbsp;♠&nbsp;一天所需卡路里&nbsp;♠&nbsp;</div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>每天活動量</th>
+                    <th>體重過輕者所需熱量</th>
+                    <th>體重正常者所需熱量</th>
+                    <th>體重過重、肥胖者所需熱量</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>輕度工作</th>
+                    <td>35大卡 X 目前體重（公斤）</td>
+                    <td>30大卡 X 目前體重（公斤）</td>
+                    <td>20~25大卡 X 目前體重（公斤）</td>
+                </tr>
+                <tr>
+                    <th>中度工作</th>
+                    <td>40大卡 X 目前體重（公斤）</td>
+                    <td>35大卡 X 目前體重（公斤）</td>
+                    <td>30大卡 X 目前體重（公斤）</td>
+                </tr>
+                <tr>
+                    <th>重度工作</th>
+                    <td>45大卡 X 目前體重（公斤）</td>
+                    <td>40大卡 X 目前體重（公斤）</td>
+                    <td>35大卡 X 目前體重（公斤）</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <b>
+                <a href="bmi.html">計算BMI:</a><br>
+                計算BMI:&nbsp;&nbsp;&nbsp;</b>
+            一位民眾身高160公分，體重65公斤，<u>BMI25.4kg/m2(=65÷1.6÷1.6)</u> ，體重屬於「過重」。<br>
+            <b>計算所需熱量:&nbsp;&nbsp;</b>
+            因他的工作為坐辦公室，屬輕量工作，每天攝取熱量應在1300至1625大卡之間(=20~25大卡*65公斤)。
+        </p>
 </body>
 <hr>
-<h2>健身影片</h2>
-<!-- 複製影片的嵌入程式碼貼上即自動出現iframe..... -->
-<iframe width="80%" height="450" src="https://www.youtube.com/embed/tfH5w_3IJPk" title="健身減重~減重計畫B 身材雕塑" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen></iframe>
+<div class="sub-title">健身影片</div>
+<div id="video">
+    <!-- 複製影片的嵌入程式碼貼上即自動出現iframe..... -->
+    <iframe width="80%" height="450" src="https://www.youtube.com/embed/tfH5w_3IJPk" title="健身減重~減重計畫B 身材雕塑"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
 
-<iframe width="80%" height="450" src="https://www.youtube.com/embed/KXCLlNGu7aQ" title="健身減重~Core Training 健康go骨力"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen></iframe>
+    <iframe width="80%" height="450" src="https://www.youtube.com/embed/KXCLlNGu7aQ" title="健身減重~Core Training 健康go骨力"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</div>
 <hr><b>嵌入影片練習</b>
 <p>
     <video width="50%" src="video/sample_960x540.mp4" controls>影片載入失敗</video>
     <hr>
-<h2>表單填寫</h2>
+<div class="sub-title">表單填寫</div>
 <form action="" meghod="GET">
     <label for="username">帳號:</label>
     <input type="text" id="username" name="username" placeholder="請輸入Email">
@@ -144,17 +258,25 @@
     <!--問老師，password會有眼睛，但眼睛不對  -->
     <button type="submit">登入</button>
     <br>
-    <h2>需要更多資訊?免費索取健身資訊</h2>
-    <br>前100名還贈送[我愛健身]書籍一本!
-    <form action="" method="">
-        <label for="mail">Email:</label>
-        <input type="email" id="mail" placeholder="請輸入Email" required>
-        <br>
-        <label for="info">您的寶貴意見</label><br>
-        <textarea name="info" id="info" cols="30" rows="10"></textarea>
-        <p><button type="submit">傳送</button></p>
-    </form>
 
-</form>
+    <h3>需要更多資訊?免費索取健身資訊</h2>
+        <br>前100名還贈送[我愛健身]書籍一本!
+        <form action="" method="">
+            <div id="post-form">
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" placeholder="請輸入Email" required>
+                <br>
+                <label for="info">您的寶貴意見</label><br>
+                <textarea name="info" id="info" cols="30" rows="10"></textarea>
+                <p><button type="submit">傳送</button>
+                    <button type="reset" style="background-color: red;">清除</button>
+                </p>
+
+        </form>
+        </div>
+        </div>
+        </body>
+
+
 
 </html>
