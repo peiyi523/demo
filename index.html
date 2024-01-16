@@ -4,10 +4,13 @@
 <html lang="zh-Hant">
 
 <head>
+
     <meta charset="utf-8">
     <title>首頁</title>
     <style>
         .sub-title {
+            /* 如果用inline模式的話margin會失去作用，所以用inline-block才能保有margin */
+            display: inline-block;
             text-align: left;
             background-color: brown;
             color: #E6A4B4;
@@ -19,18 +22,7 @@
             margin: 12px;
         }
 
-        .title {
-            /* 分left,center,right */
-            text-align: center;
-            color: #864AF9;
-            background-color: #F8E559;
-            font-size: 3rem;
-            border-radius: 12px;
-            /* margin是指外間距 四個方位順序分別為上右下左*/
-            /* padding是指內間距 */
-            margin: 24px 48px;
-            padding: 12px;
-        }
+
 
         .eng-title {
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -51,12 +43,10 @@
             font-size: 1rem;
         }
 
-        #container {
-            padding: 1rem;
 
-        }
 
         .image {
+            display: inline-block;
             background-color: white;
             padding: 6px;
             width: 28%;
@@ -108,24 +98,6 @@
             text-align: center;
         }
 
-        form {
-            width: 60%;
-            background-color: bisque;
-            padding: 1rem 0px;
-            border-radius: 1rem;
-            padding: 12px;
-            margin: 3px auto;
-
-        }
-
-        /* 透過逗點同時做二個不同區域但相同樣式的設計 */
-        input,
-        textarea,
-        label,
-        button {
-            margin: 6px 0px;
-            font-size: 12px;
-        }
 
         button {
             background-color: aqua;
@@ -134,17 +106,26 @@
         }
 
 
-        body {
-            background-color: #AC87C5;
-            color: #0C356A;
-            font-family: 標楷體, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+        a {
+            color: blue;
+        }
+
+        a:hover {
+            color: red;
         }
     </style>
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div id="container">
+        <a href="">首頁</a>
+        <a href="">關於我</a>
+        <a href="">商品</a>
+        <a href="">聯繫我們</a>
+
         <!-- STYLE CSS樣式設計 -->
         <div class="title">我愛健身網站
             <span class="eng-title">GYM WEB</span>

@@ -1,0 +1,67 @@
+body {
+    background-color: #AC87C5;
+    background-image: url("../images/javier-santos-guzman-9MR78HGoflw-unsplash.jpg");
+    background-size: contain;
+    color: #0C356A;
+    font-family: 標楷體, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.title {
+    display: block;
+    /* 分left,center,right */
+    text-align: center;
+    color: brown;
+    background-color: #F8E559;
+    font-size: 3rem;
+    border-radius: 12px;
+    /* margin是指外間距 四個方位順序分別為上右下左*/
+    /* padding是指內間距 */
+    margin: 24px 48px;
+    padding: 12px;
+}
+
+#container {
+    padding: 1rem;
+
+}
+
+form {
+    text-align: center;
+    width: 50%;
+    background-color: bisque;
+    /* 跨路徑引用別人的folder時要用../ */
+    background-image: url("../images/charles-gaudreault-xXofYCc3hqc-unsplash (1).jpg");
+    background-size: cover;
+    padding: 1rem 0px;
+    border-radius: 1rem;
+    padding: 12px;
+    margin: 3px auto;
+    color: wheat;
+
+}
+
+/* 透過逗點同時做二個不同區域但相同樣式的設計 */
+input,
+textarea,
+label,
+button {
+    margin: 6px 0px;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media screen and (max-width:1024px) {
+    form {
+        width: 80%;
+        font-size: 12px;
+    }
+}
+    @media screen and (max-width:768px) {
+        table{
+            width: 100%;
+        }
+        form {
+            width: 100%;
+            font-size: 16px;
+        }
+    }
