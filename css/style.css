@@ -30,7 +30,7 @@ form {
     width: 50%;
     background-color: bisque;
     /* 跨路徑引用別人的folder時要用../ */
-    background-image: url("../images/charles-gaudreault-xXofYCc3hqc-unsplash (1).jpg");
+    background-image: url("../images/samuel-girven-VJ2s0c20qCo-unsplash\ \(1\).jpg");
     background-size: cover;
     padding: 1rem 0px;
     border-radius: 1rem;
@@ -62,6 +62,6 @@ button {
         }
         form {
             width: 100%;
-            font-size: 16px;
+            font-size: 12px;
         }
     }
