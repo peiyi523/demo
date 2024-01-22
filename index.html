@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,58 +8,16 @@
 </head>
 
 <body>
-    <h1>JavaScrip</h1>
+    <h1>JavaScript</h1>
     <h2>本期預測號碼==></h2>
+    <button>開獎!</button><br>
+    <div id="lottroy">
 
 
-    <script>
-        while (true) {
-            let r = getRandomInt(1, 49);
-            console.log(r);
-            if (r == 49) {
-                break;
-            }
-
-        }
-
-        function getRandomInt(start, end) {
-            let x = Math.floor(Math.random() * end) + start;
-            return x
-        }
-        // 取1~49中6個號碼輸出到網頁
-        // 外迴圈（控制組數）=>產生五組號碼
-        let rows = [];
-        for (let i = 0; i < 5; i++) {
-            // 內迴圈產生每組6個號碼
-            let numbers = [];
-            while (true) {
-                let x = getRandomInt(1, 49);
-                // document.write("<h3>第" + (j + 1) + "個號碼:" + x + "</h3>");
-                // document.write(`<h3>第${(j + 1)}個號碼: ${x}</h3>`);
-                if (!numbers.includes(x)) {
-                    numbers.push(x);
-                }
-                if (numbers.lenght == 6) {
-                    break;
-                }
-            }
-            rows.push(numbers);
-        }
-        // 輸出樂透號碼到document
-        console.log(rows);
-        for (let i = 0; i < rows.length; i++) {
-            console.log(rows[i]);
-        }
+    </div>
 
 
-
-
-
-
-
-
-
-    </script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
