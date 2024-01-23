@@ -46,69 +46,91 @@ function getRandomInt(start, end) {
     return x
 }
 
-document.write(Date() + "<hr>");
+function getNumbers(num, length) {
+    let rows = [];
+    for (let i = 0; i < num; i++) {
+        let numbers = [];
+        // 內迴圈產生每組的六個號碼(不重複)
+        while (true) {
+            let x = getRandomInt(1, 49);
+            // !=>not，includes(是否包含)
+            if (!numbers.includes(x)) {
+                numbers.push(x);
+            }
+
+            if (numbers.length == length) {
+                break;
+            }
+        }
+        numbers.sort(compare);
+        // 排序
+        rows.push(numbers);
+    }
+    return rows;
+}
+function getLottroy() {
+    const lottroyEl = document.querySelector("#lottroy");
+    let num = prompt("請輸入組數")
+    rows = getNumbers(num, 10);
+
+    //輸出樂透號碼到document
+    // total=0
+    lottroyEl.innerHTML = "";
+    for (let i = 0; i < rows.length; i++) {
+        result = rows[i].join(" , ");
+        lottroyEl.innerHTML += `<h3>第${i + 1}組號碼: ${result}</h3><hr>`;
+        // alert("click!");
+    }
+}
+const dateEl = document.querySelector(".date");
+dateEl.innerText = Date()
+
+
+// document.write(Date() + "<hr>");
 
 //使用陣列(串列)
 // 外迴圈(控制組數)  =>產生五組號碼
-let rows = [];
-for (let i = 0; i < 5; i++) {
-    let numbers = [];
-    // 內迴圈產生每組的六個號碼(不重複)
-    while (true) {
-        let x = getRandomInt(1, 49);
-        // !=>not，includes(是否包含)
-        if (!numbers.includes(x)) {
-            numbers.push(x);
-        }
-        if (numbers.length == 6) {
-            break;
-        }
-    }
 
-    numbers.sort(compare);
-    // 排序
-    rows.push(numbers);
-}
 
 //排序的方法
 function compare(a, b) {
     return a - b;
 }
 
-console.log(rows);
-const lottroyEl = document.querySelector("#lottroy");
-//輸出樂透號碼到document
-for (let i = 0; i < rows.length; i++) {
-    result = rows[i].join(" , ");    
-    lottroyEl.innerHTML+=`<h3>第${i + 1}組號碼: ${result}</h3><hr>`;    
-}
+// console.log(rows);
+// const lottroyEl = document.querySelector("#lottroy");
+// //輸出樂透號碼到document
+// for (let i = 0; i < rows.length; i++) {
+//     result = rows[i].join(" , ");
+//     lottroyEl.innerHTML += `<h3>第${i + 1}組號碼: ${result}</h3><hr>`;
+// }
 
 
 // object =>json
 let user = {
-    name:"Jerry",
-    height:178.6,
-    weight:77.8
+    name: "Jerry",
+    height: 178.6,
+    weight: 77.8
 }
 
-console.log(user,typeof(user));
-console.log(user.name,user["name"]);
+console.log(user, typeof (user));
+console.log(user.name, user["name"]);
 
-console.log(getBmi("180","78"));
+console.log(getBmi("180", "78"));
 
 //計算bmi函式
-function getBmi(height,weight){
-    let bmi = weight/(height/100)**2;
-    if(isNaN(bmi)){
+function getBmi(height, weight) {
+    let bmi = weight / (height / 100) ** 2;
+    if (isNaN(bmi)) {
         return "數值錯誤!";
     }
 
     return bmi.toFixed(2);
 }
 
-const h1=document.querySelector("h1");
+const h1 = document.querySelector("h1");
 
-console.log(lottroyEl);
+// console.log(lottroyEl);
 // innerText
-h1.innerHTML="<u>大樂透</u>";
-h1.style.color="red";
+h1.innerHTML = "<u>大樂透</u>";
+h1.style.color = "red";
