@@ -16,6 +16,26 @@
         a {
             color: yellow;
         }
+
+        /* #bmi {
+            font-size: 32px;
+            color: greenyellow;
+        } */
+
+        #comment {
+            font-size: 24px;
+        }
+
+        #result {
+            width: 300px;
+            background-color: blanchedalmond;
+            color: black;
+            margin: 12px auto;
+            border-radius: 12px;
+            padding: 12px 0px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: larger;
+        }
     </style>
     <link rel="stylesheet" href="./css/style.css">
 
@@ -37,6 +57,14 @@
             <input type="number" step='0.1' id="weight" name="weight" value="54" required>
             <br><br>
             <button type="button" onclick=" calcBmi()">計算</button>
+            <button type="button" onclick=" clearForm()" style="background-color: brown; color: wheat;">清除</button>
+            <div id="result">
+                <div id="bmi">
+                    BMI:45.5
+                </div>
+                <div id="comment">
+                </div>
+            </div>
 
         </form>
         <a href="index.html">回首頁</a>
