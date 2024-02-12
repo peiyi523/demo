@@ -10,6 +10,8 @@
 <body>
     <h1>JavaScript</h1>
 
+    <h2>本期預測號碼==></h2>
+
     <script>
         // // 使用let優於var
         // let x = 50;
@@ -70,19 +72,36 @@
 
         }
         // 輸出5組六個號碼
+        document.write(Date());
         let datas = [];
         for (let j = 0; j < 5; j++) {
             let numbers = [];
-            for (let i = 0; i < 6; i++) {
+            while (true) {
                 let x = getRandomInt(1, 49);
-                // document.write(`<h3>第${i + 1}個號碼:${x}</h3>`)
-                numbers.push(x);
+                // 用!和includes取不重覆的號碼
+                if (!numbers.includes(x)) {
+                    // document.write(`<h3>第${i + 1}個號碼:${x}</h3>`)
+                    numbers.push(x);
+                }
+                if (numbers.length == 6) {
+                    break;
+                }
             }
-            console.log(numbers);
+            // 排序
+            numbers.sort(compare);
             datas.push(numbers);
         }
+        function compare(a, b) {
+            return a - b;
+        }
+
         console.log(datas);
         // 以橫版顯示輸出到document
+        for (let i = 0; i < datas.length; i++) {
+            result = datas[i].join(",");
+            console.log(result);
+            document.write(`<h3>第${i + 1}組號碼:${result}</h3><hr>`)
+        }
     </script>
 </body>
 
