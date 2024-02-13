@@ -179,13 +179,40 @@ function compare(a, b) {
 }
 
 console.log(datas);
+const lotteryEl = document.querySelector("#lottery");
 // 以橫版顯示輸出到document
 for (let i = 0; i < datas.length; i++) {
     result = datas[i].join(",");
     console.log(result);
-    document.write(`<h3>第${i + 1}組號碼:${result}</h3><hr>`)
+    lotteryEl.innerHTML += `<h3>第${i + 1}組號碼:${result}</h3><hr>`
+    // document.write(`<h3>第${i + 1}組號碼:${result}</h3><hr>`)
 }
 // 更精準的轉型
 x = "3.5";
 // document.write(Number(x));
-document.write(parseInt(x));
+// document.write(parseInt(x));
+// object=>json
+let user = {
+    name: "Peggy",
+    height: 164,
+    weight: 54
+}
+console.log(user, typeof (user));
+console.log(user.name, user["name"]);
+
+// 計算bmi函式
+function getBmi(height, weight) {
+    let bmi = weight / (height / 100) ** 2;
+    if (isNaN(bmi)) {
+        return "數值錯誤!"
+    }
+    return bmi.toFixed(2);
+}
+console.log(getBmi("abc", "250"));
+
+const h1 = document.querySelector("h1");
+
+console.log(lotteryEl);
+
+h1.innerHTML = "<u>大樂透</u>";
+h1.style.color = "red";
