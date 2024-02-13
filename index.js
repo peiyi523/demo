@@ -154,39 +154,52 @@ function getRandomInt(start, end) {
     return r
 
 }
-// 輸出5組六個號碼
-document.write(Date());
-let datas = [];
-for (let j = 0; j < 5; j++) {
-    let numbers = [];
-    while (true) {
-        let x = getRandomInt(1, 49);
-        // 用!和includes取不重覆的號碼
-        if (!numbers.includes(x)) {
-            // document.write(`<h3>第${i + 1}個號碼:${x}</h3>`)
-            numbers.push(x);
+
+function getLottery() {
+
+    const lotteryEl = document.querySelector("#lottery");
+    let datas = [];
+    for (let j = 0; j < 5; j++) {
+        let numbers = [];
+        while (true) {
+            let x = getRandomInt(1, 49);
+            // 用!和includes取不重覆的號碼
+            if (!numbers.includes(x)) {
+                // document.write(`<h3>第${i + 1}個號碼:${x}</h3>`)
+                numbers.push(x);
+            }
+            if (numbers.length == 6) {
+                break;
+            }
         }
-        if (numbers.length == 6) {
-            break;
+        // 排序
+        numbers.sort(compare);
+        datas.push(numbers);
+        // 以橫版顯示輸出到document
+        lotteryEl.innerHTML = "";
+        for (let i = 0; i < datas.length; i++) {
+            result = datas[i].join(",");
+            console.log(result);
+            lotteryEl.innerHTML += `<h3>第${i + 1}組號碼:${result}</h3><hr>`
         }
+
     }
-    // 排序
-    numbers.sort(compare);
-    datas.push(numbers);
 }
+
+const dateEl = document.querySelector(".date");
+dateEl.innerText = Date()
+console.log(dateEl);
+// 輸出5組六個號碼
+// document.write(Date() + "<hr>");
+
+
 function compare(a, b) {
     return a - b;
 }
 
-console.log(datas);
-const lotteryEl = document.querySelector("#lottery");
-// 以橫版顯示輸出到document
-for (let i = 0; i < datas.length; i++) {
-    result = datas[i].join(",");
-    console.log(result);
-    lotteryEl.innerHTML += `<h3>第${i + 1}組號碼:${result}</h3><hr>`
-    // document.write(`<h3>第${i + 1}組號碼:${result}</h3><hr>`)
-}
+
+// document.write(`<h3>第${i + 1}組號碼:${result}</h3><hr>`)
+
 // 更精準的轉型
 x = "3.5";
 // document.write(Number(x));
@@ -212,7 +225,7 @@ console.log(getBmi("abc", "250"));
 
 const h1 = document.querySelector("h1");
 
-console.log(lotteryEl);
+// console.log(lotteryEl);
 
 h1.innerHTML = "<u>大樂透</u>";
 h1.style.color = "red";
